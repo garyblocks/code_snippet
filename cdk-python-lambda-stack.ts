@@ -24,7 +24,7 @@ export class LambdaStack extends cdk.Stack {
 
     const lambda = new PythonFunction(this, functionName, {
       role,
-      entry: `../lambdas/${triggerFunctionName}`,
+      entry: `../lambdas/${functionName}`,
       index: 'index.py',
       handler: 'handler',
       memorySize: 3008,
